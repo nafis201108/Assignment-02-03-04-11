@@ -6,7 +6,7 @@ void main() {
 }
 
 class English {
-  dynamic literature = 'novel no 1';
+  dynamic literature = 'novel no 2';
   void subject() {
     print('Marks in English is 80');
   }

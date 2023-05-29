@@ -1,8 +1,8 @@
-//1. Create a Super Class & Sub Class. And Make relationship between the two classes.Super Class Name : English, Sub Class Name : Bangla
+//2. Write a program using abstract class.
 void main() {
   education Education = education();
   Education.novel();
-  Education.story();
+  Education.
 }
 
 abstract class book {
