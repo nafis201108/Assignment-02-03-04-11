@@ -2,7 +2,7 @@
 void main() {
   education Education = education();
   Education.novel();
-  Education.
+  Education.story();
 }
 
 abstract class book {
