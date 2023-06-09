@@ -7,16 +7,18 @@ class Homepage extends StatelessWidget {
 
 String Name='';
 int Studentid=0;
-int session=0;
+String session='';
 String department='';
-double course=0;
+String course='';
 final formkey = GlobalKey<FormState>(); //mukhosto chara no way website a ashena
 Homecontroller homecontroller= Get.put(Homecontroller());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
     appBar: AppBar(
+
       centerTitle: true,
       title: Text('course registration form'.toUpperCase()),
       backgroundColor: Colors.black87,
@@ -24,6 +26,7 @@ Homecontroller homecontroller= Get.put(Homecontroller());
     ),
 
       body: Center(
+
         child: Container(
           child:Column(
             children: [
@@ -65,9 +68,6 @@ TextFormField(decoration: InputDecoration(hintText: "StudentID"),
 
 
 
-
-
-
                     TextFormField(decoration: InputDecoration(hintText: "Session"),
 
                       validator: (value){
@@ -78,7 +78,7 @@ TextFormField(decoration: InputDecoration(hintText: "StudentID"),
                         return null;
                       },
                       onSaved:(value){
-                      session=  int.parse(value.toString());
+                      session=  value.toString();
                       } ,
 
 
@@ -108,7 +108,7 @@ TextFormField(decoration: InputDecoration(hintText: "StudentID"),
                         return null;
                       },
                       onSaved:(value){
-                       course= double.parse(value.toString());
+                       course= value.toString();
                       } ,
 
 
@@ -124,7 +124,7 @@ TextFormField(decoration: InputDecoration(hintText: "StudentID"),
               ),
 
               ElevatedButton(onPressed: (){
-
+                print('mdrafiulislamnafis');
 
                 if(formkey.currentState!.validate()){
 
@@ -137,7 +137,7 @@ TextFormField(decoration: InputDecoration(hintText: "StudentID"),
 
 
               }, child: Text('Add Data')),
-
+           SizedBox(height: 20,),
               Expanded(
                 child: GetBuilder<Homecontroller>(builder: (_){
 
@@ -151,18 +151,18 @@ TextFormField(decoration: InputDecoration(hintText: "StudentID"),
 
                         return Container(
 
-                          color: Colors.green,
+
                           child: Column(
                             children: [
 
-                              Text(homecontroller.studentslist[index].session.toString()),
+                              Text(homecontroller.studentslist[index].session.toString(),style:TextStyle(fontSize: 40),),
 
-                              Text(homecontroller.studentslist[index].Studentid.toString()),
-                              Text(homecontroller.studentslist[index].department),
+                              Text(homecontroller.studentslist[index].Studentid.toString(),style:TextStyle(fontSize: 40),),
+                              Text(homecontroller.studentslist[index].department,style:TextStyle(fontSize: 40),),
 
-                              Text(homecontroller.studentslist[index].Name),
+                              Text(homecontroller.studentslist[index].Name,style:TextStyle(fontSize: 40),),
 
-                              Text(homecontroller.studentslist[index].course.toString()),
+                              Text(homecontroller.studentslist[index].course,style:TextStyle(fontSize: 40),),
 
                             ],
                           ),
