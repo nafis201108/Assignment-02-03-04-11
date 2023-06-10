@@ -25,10 +25,13 @@ Homecontroller homecontroller= Get.put(Homecontroller());
 
     ),
 
+
       body: Center(
 
         child: Container(
+
           child:Column(
+
             children: [
               Form(
                 key: formkey,
@@ -153,14 +156,16 @@ TextFormField(decoration: InputDecoration(hintText: "StudentID"),
 
 
                           child: Column(
+
+
                             children: [
 
-                              Text(homecontroller.studentslist[index].session.toString(),style:TextStyle(fontSize: 40),),
+                          Text(homecontroller.studentslist[index].Studentid.toString(),style:TextStyle(fontSize: 40),),
 
-                              Text(homecontroller.studentslist[index].Studentid.toString(),style:TextStyle(fontSize: 40),),
+                              Text(homecontroller.studentslist[index].Name.toString(),style:TextStyle(fontSize: 40),),
+                              Text(homecontroller.studentslist[index].session,style:TextStyle(fontSize: 40),),
+
                               Text(homecontroller.studentslist[index].department,style:TextStyle(fontSize: 40),),
-
-                              Text(homecontroller.studentslist[index].Name,style:TextStyle(fontSize: 40),),
 
                               Text(homecontroller.studentslist[index].course,style:TextStyle(fontSize: 40),),
 
